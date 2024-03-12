@@ -4,7 +4,7 @@ const UserModel = require('../models/user.model');
 // Vérification que les ID sont reconnus par la BDD //
 const ObjectID = require('mongoose').Types.ObjectId;
 
-// Obtenir tout les utilisateurs //
+// 1 Obtenir tout les utilisateurs //
 module.exports.getAllUsers = async (req, res) => {
     const users = await UserModel.find().select('-password');
     res.status(200).json(users);

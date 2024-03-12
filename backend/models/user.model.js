@@ -1,10 +1,10 @@
 const  mongoose = require('mongoose');
 
 // Variable qui fonctinne avec la dépendance Validator pour que l'email soit bien correspondant à la syntaxe d'un e-mail //
-
 const { isEmail } = require('validator');
 const bcrypt = require('bcrypt');
 
+//Schéma d'un utlisateur
 const userSchema = new mongoose.Schema(
     {
         pseudo: {
@@ -27,7 +27,7 @@ const userSchema = new mongoose.Schema(
             type: String,
             required: true,
             max: 1024,
-            minLength: 6 
+            minlength: 6 
         },
         picture: {
             type: String,
